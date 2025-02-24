@@ -11,6 +11,11 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+// Add the new /links route with the same response
+app.get("/links", (req, res) => {
+  res.send("Hello World!"); // same response as root route
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
